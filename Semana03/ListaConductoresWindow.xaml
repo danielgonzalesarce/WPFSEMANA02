@@ -1,0 +1,23 @@
+﻿<Window x:Class="Semana03.ListaConductoresWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        Title="Lista de Conductores" Height="350" Width="520"
+        WindowStartupLocation="CenterScreen">
+    <Grid Margin="15">
+        <Grid.RowDefinitions>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="*"/>
+        </Grid.RowDefinitions>
+
+        <TextBlock Text="LISTA DE CONDUCTORES" FontSize="16" FontWeight="Bold" Margin="0,0,0,10" HorizontalAlignment="Center"/>
+
+        <!-- Punto 8: Tabla con Nombre Conductor, Licencia y Transporte -->
+        <DataGrid x:Name="dgConductores" Grid.Row="1" AutoGenerateColumns="False" CanUserAddRows="False" IsReadOnly="True">
+            <DataGrid.Columns>
+                <DataGridTextColumn Header="Nombre Conductor" Binding="{Binding NombreConductor}" Width="*"/>
+                <DataGridTextColumn Header="Licencia" Binding="{Binding Licencia}" Width="130"/>
+                <DataGridTextColumn Header="Transporte" Binding="{Binding Transporte}" Width="150"/>
+            </DataGrid.Columns>
+        </DataGrid>
+    </Grid>
+</Window>

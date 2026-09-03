@@ -1,0 +1,37 @@
+﻿<Window x:Class="Semana03.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        Title="Sistema de Gestión - Menú Principal" Height="500" Width="800"
+        WindowStartupLocation="CenterScreen">
+    <DockPanel>
+        <!-- Menú Principal con Operaciones, Mantenimientos y Reportes -->
+        <Menu DockPanel.Dock="Top" FontSize="14" Padding="5">
+            <!-- 3. Operaciones -->
+            <MenuItem Header="Operaciones">
+                <MenuItem Header="Ingresos" Click="MenuIngresos_Click"/>
+                <MenuItem Header="Salida" Click="MenuDummy_Click"/>
+            </MenuItem>
+
+            <!-- 4. Mantenimientos -->
+            <MenuItem Header="Mantenimientos">
+                <MenuItem Header="Conductores (Registro)" Click="MenuConductores_Click"/>
+                <MenuItem Header="Lista de Conductores" Click="MenuListaConductores_Click"/>
+                <MenuItem Header="Transportistas" Click="MenuDummy_Click"/>
+                <MenuItem Header="Camiones" Click="MenuDummy_Click"/>
+                <MenuItem Header="Productos" Click="MenuDummy_Click"/>
+            </MenuItem>
+
+            <!-- 5. Reportes -->
+            <MenuItem Header="Reportes">
+                <MenuItem Header="Cargas" Click="MenuDummy_Click"/>
+                <MenuItem Header="Ingresos" Click="MenuReporteIngresos_Click"/>
+                <MenuItem Header="Salidas" Click="MenuDummy_Click"/>
+            </MenuItem>
+        </Menu>
+
+        <Grid Background="#F4F4F4">
+            <TextBlock Text="SISTEMA DE GESTIÓN Y CONTROL" HorizontalAlignment="Center" 
+                       VerticalAlignment="Center" FontSize="22" FontWeight="Bold" Foreground="#444444"/>
+        </Grid>
+    </DockPanel>
+</Window>

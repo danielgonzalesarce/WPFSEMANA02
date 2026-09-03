@@ -1,0 +1,74 @@
+﻿<Window x:Class="Semana03.RegistroIngresoWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        Title="Registro de Ingresos" Height="420" Width="450"
+        WindowStartupLocation="CenterScreen">
+    <Grid Margin="15">
+        <Grid.RowDefinitions>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="*"/>
+            <RowDefinition Height="Auto"/>
+        </Grid.RowDefinitions>
+
+        <TextBlock Text="REGISTRO DE INGRESOS" FontSize="16" FontWeight="Bold" Margin="0,0,0,15" HorizontalAlignment="Center"/>
+
+        <Grid Grid.Row="1">
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="140"/>
+                <ColumnDefinition Width="*"/>
+            </Grid.ColumnDefinitions>
+            <Grid.RowDefinitions>
+                <RowDefinition Height="32"/>
+                <RowDefinition Height="32"/>
+                <RowDefinition Height="32"/>
+                <RowDefinition Height="32"/>
+                <RowDefinition Height="32"/>
+                <RowDefinition Height="32"/>
+                <RowDefinition Height="32"/>
+                <RowDefinition Height="32"/>
+            </Grid.RowDefinitions>
+
+            <!-- a. TipoDocumento -->
+            <TextBlock Text="Tipo Documento:" Grid.Row="0" VerticalAlignment="Center"/>
+            <ComboBox x:Name="cmbTipoDoc" Grid.Row="0" Grid.Column="1" Height="25">
+                <ComboBoxItem Content="DNI"/>
+                <ComboBoxItem Content="RUC"/>
+                <ComboBoxItem Content="Pasaporte"/>
+            </ComboBox>
+
+            <!-- b. Numero Documento -->
+            <TextBlock Text="Número Documento:" Grid.Row="1" VerticalAlignment="Center"/>
+            <TextBox x:Name="txtNumDoc" Grid.Row="1" Grid.Column="1" Height="25" VerticalContentAlignment="Center"/>
+
+            <!-- c. Placa -->
+            <TextBlock Text="Placa:" Grid.Row="2" VerticalAlignment="Center"/>
+            <TextBox x:Name="txtPlaca" Grid.Row="2" Grid.Column="1" Height="25" VerticalContentAlignment="Center"/>
+
+            <!-- d. Turno -->
+            <TextBlock Text="Turno:" Grid.Row="3" VerticalAlignment="Center"/>
+            <ComboBox x:Name="cmbTurno" Grid.Row="3" Grid.Column="1" Height="25">
+                <ComboBoxItem Content="Mañana"/>
+                <ComboBoxItem Content="Tarde"/>
+                <ComboBoxItem Content="Noche"/>
+            </ComboBox>
+
+            <!-- e. Nombre Conductor -->
+            <TextBlock Text="Nombre Conductor:" Grid.Row="4" VerticalAlignment="Center"/>
+            <TextBox x:Name="txtNombreConductor" Grid.Row="4" Grid.Column="1" Height="25" VerticalContentAlignment="Center"/>
+
+            <!-- f. Nombre Cliente -->
+            <TextBlock Text="Nombre Cliente:" Grid.Row="5" VerticalAlignment="Center"/>
+            <TextBox x:Name="txtNombreCliente" Grid.Row="5" Grid.Column="1" Height="25" VerticalContentAlignment="Center"/>
+
+            <!-- g. Fecha y Hora -->
+            <TextBlock Text="Fecha y Hora:" Grid.Row="6" VerticalAlignment="Center"/>
+            <DatePicker x:Name="dtpFechaHora" Grid.Row="6" Grid.Column="1" Height="25"/>
+
+            <!-- h. Peso de Ingreso -->
+            <TextBlock Text="Peso de Ingreso (kg):" Grid.Row="7" VerticalAlignment="Center"/>
+            <TextBox x:Name="txtPesoIngreso" Grid.Row="7" Grid.Column="1" Height="25" VerticalContentAlignment="Center"/>
+        </Grid>
+
+        <Button Content="Guardar Ingreso" Grid.Row="2" Height="35" Margin="0,15,0,0" Click="btnGuardar_Click" Background="#28A745" Foreground="White" FontWeight="Bold"/>
+    </Grid>
+</Window>
